@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Models\Site;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,15 +17,15 @@ use App\Models\Listing;
 
 //Gets all listings
 Route::get('/', function () {
-    return view('listings', [
-        'heading' => 'Latest Listings',
-        'listings' => Listing::all()
+    return view('sites', [
+        'heading' => 'Recently uploaded sites',
+        'sites' => Site::all()
     ]);
 });
 
-Route::get('/listings/{id}', function ($id) {
-    return view('listing', [
-        'listing' => Listing::find($id)
+Route::get('/sites/{id}', function ($id) {
+    return view('site', [
+        'site' => Site::find($id)
     ]);
 });
 
