@@ -23,9 +23,9 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/sites/{id}', function ($id) {
+Route::get('/sites/{site}', function (Site $site) {
     return view('site', [
-        'site' => Site::find($id)
+        'site' => $site
     ]);
 });
 
