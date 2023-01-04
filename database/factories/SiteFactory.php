@@ -19,9 +19,10 @@ class SiteFactory extends Factory
         return [
             'title' => fake()->sentence(),
             'tags' => 'green, cold, rad',
-            'location' => fake()->word(),
+            'state' => fake()->word(),
             'directions' => fake()->sentence(),
-            'description' => fake()->paragraph(3)
+            'description' => fake()->paragraph(3),
+            'area' => fake()->sentence()
         ];
     }
 }

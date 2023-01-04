@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('tags');
-            $table->string('location');
+            $table->string('state');
+            $table->string('area');
             $table->longText('directions');
             $table->longText('description');
             $table->timestamps();

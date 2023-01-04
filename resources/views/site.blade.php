@@ -1,3 +1,6 @@
+@extends('layout')
+
+@section('content')
 <h2>
     {{$site['title']}}
 </h2>
@@ -5,8 +8,9 @@
     {{$site['description']}}
 </p>
 <p>
-    Location: {{$site['location']}}
+    Location: {{$site['state']}}
 </p>
 <p>
     Directions: {{$site['directions']}}
 </p>
+@endsection
