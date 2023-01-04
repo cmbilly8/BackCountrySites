@@ -28,8 +28,7 @@
     </head>
     <body class="mb-48">
         <nav class="flex justify-between items-center mb-4 bg-slate-200">
-            <a href="index.html"
-                ><img class="w-24" src="{{asset('images/bear-logo.jpg')}}" alt="" class="logo"
+            <a href="/"><img class="w-24" src="{{asset('images/bear-logo.jpg')}}" alt="" class="logo"
             /></a>
             <ul class="flex space-x-6 mr-6 text-xl">
                 <li>
@@ -37,8 +36,7 @@
                         ><i class="fa-solid fa-user-plus"></i>Register</a>
                 </li>
                 <li>
-                    <a href="login.html" class="hover:text-laravel"
-                        ><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a>
+                    <a href="login.html" class="hover:text-laravel"><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a>
                 </li>
             </ul>
         </nav>
