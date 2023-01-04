@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+@include('partials._search')
 <h2>
     {{$site['title']}}
 </h2>
