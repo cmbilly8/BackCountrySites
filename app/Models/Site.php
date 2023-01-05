@@ -13,5 +13,11 @@ class Site extends Model
         if($filters['tag'] ?? false) {
             $query->where('tags', 'like', '%' . request('tag') . '%');
         }
+
+        if($filters['search'] ?? false) {
+            $query->where('title', 'like', '%' . request('search') . '%')
+            ->orWhere('area', 'like', '%' . request('search') . '%')
+            ->orWhere('state', 'like', '%' . request('search') . '%');
+        }
     }
 }

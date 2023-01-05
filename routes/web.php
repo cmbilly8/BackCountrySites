@@ -16,8 +16,11 @@ use App\Models\Site;
 |
 */
 
-//Gets all listings
+//Gets all recent sites
 Route::get('/', [SiteController::class, 'index']);
 
-Route::get('/sites/{site}', [SiteController::class, 'show']);
+// Show create site form
+Route::get('/sites/create', [SiteController::class, 'create']);
 
+//Get one site. MAKE SURE THIS IS BELOW THE CREATE SITE ROUTE OR ELSE IT TRIES TO PARSE CREATE AS A SITE!!!
+Route::get('/sites/{site}', [SiteController::class, 'show']);
