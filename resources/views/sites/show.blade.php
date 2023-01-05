@@ -12,20 +12,7 @@
 
                         <h3 class="text-2xl mb-2">{{$site->title}}</h3>
                         <div class="text-xl font-bold mb-4">{{$site->state}}</div>
-                        <ul class="flex">
-                            <li class="bg-black text-white rounded-xl px-3 py-1 mr-2">
-                                <a href="#">tag</a>
-                            </li>
-                            <li class="bg-black text-white rounded-xl px-3 py-1 mr-2">
-                                <a href="#">tag</a>
-                            </li>
-                            <li class="bg-black text-white rounded-xl px-3 py-1 mr-2">
-                                <a href="#">tag</a>
-                            </li>
-                            <li lass="bg-black text-white rounded-xl px-3 py-1 mr-2">
-                                <a href="#">tag</a>
-                            </li>
-                        </ul>
+                            <x-site-tags :tagsCSV='$site->tags' />
                         <div class="text-lg my-4">
                             <i class="fa-solid fa-location-dot"></i> {{$site->area}}
                         </div>
