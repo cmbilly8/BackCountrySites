@@ -1,1 +1,2 @@
-Laravel + Tailwind CSS (and html of course)
+Laravel + Tailwind CSS
+In progress
