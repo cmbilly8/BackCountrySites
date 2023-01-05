@@ -12,6 +12,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <script src="//unpkg.com/alpinejs" defer></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
@@ -48,5 +49,6 @@
             <p class="ml-2 text-4xl">Get lost</p>
             <a href="/sites/create" class="absolute top-1/4 right-10 bg-black text-white py-2 px-5">Post a site</a>
         </footer>
+        <x-flash-message />
     </body>
 </html>

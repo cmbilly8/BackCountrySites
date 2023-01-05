@@ -9,6 +9,8 @@ class Site extends Model
 {
     use HasFactory;
 
+    // protected $fillable = ['title', 'area', 'state', 'tags', 'description', 'directions'];
+
     public function scopeFilter($query, array $filters) {
         if($filters['tag'] ?? false) {
             $query->where('tags', 'like', '%' . request('tag') . '%');

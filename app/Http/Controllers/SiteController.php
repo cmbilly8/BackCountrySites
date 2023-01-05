@@ -25,4 +25,20 @@ class SiteController extends Controller
     public function create() {
         return view('sites.create');
     }
+
+    // Store user-generated site posting
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'title' => 'required',
+            'area' => 'required',
+            'state' => 'required',
+            'directions' => 'required',
+            'description' => 'required',
+            'tags' => 'regex:/[a-zA-Z0-9,]*/'
+        ]);
+
+        Site::create($formFields);
+
+        return redirect('/')->with('message', 'Post sucessful!');
+    }
 }

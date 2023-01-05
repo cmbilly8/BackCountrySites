@@ -22,5 +22,9 @@ Route::get('/', [SiteController::class, 'index']);
 // Show create site form
 Route::get('/sites/create', [SiteController::class, 'create']);
 
-//Get one site. MAKE SURE THIS IS BELOW THE CREATE SITE ROUTE OR ELSE IT TRIES TO PARSE CREATE AS A SITE!!!
+// Make new site posting
+Route::post('/sites', [SiteController::class, 'store']);
+
+//Get one site. MAKE SURE THIS LAST OR ELSE IT TRIES TO PARSE CREATE AS A SITE!!!
 Route::get('/sites/{site}', [SiteController::class, 'show']);
+
