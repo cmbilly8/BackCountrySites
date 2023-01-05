@@ -6,7 +6,7 @@
 
 <div class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4">
     @if(count($sites) == 0)
-    <p>No listings found</p>
+    <p>No sites found</p>
     @endif
 
     @foreach($sites as $site)

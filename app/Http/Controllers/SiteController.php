@@ -10,7 +10,7 @@ class SiteController extends Controller
     // Get all sites
     public function index() {
         return view('sites.index', [
-            'sites' => Site::all()
+            'sites' => Site::latest()->filter(request(['tag']))->get()
         ]);
     }
 
